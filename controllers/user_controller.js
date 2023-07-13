@@ -32,5 +32,4 @@ module.exports = {
   getAllUsers,
   deleteUser,
   editUser,
-  loginUser,
 };
