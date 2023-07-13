@@ -3,6 +3,7 @@ require("express-async-errors");
 const employeeRoute = require("./routes/employee_route");
 const userRoute = require("./routes/user_route");
 const authRoute = require("./routes/auth_route");
+const logRoute = require("./routes/log_route");
 const connectDB = require("./db/connect");
 const notFoundMinddleware = require("./middlewares/not-found");
 const errorHandlerMiddleware = require("./middlewares/error-handler");
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use("/api/v1/employee", employeeRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/login", authRoute);
+app.use("/api/v1/log", logRoute);
 
 // middlewares
 app.use(errorHandlerMiddleware);
