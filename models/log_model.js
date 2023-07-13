@@ -1,24 +1,24 @@
 const mongoose = require("mongoose");
 
 const LogSchema = mongoose.Schema({
-  Date: {
+  date: {
     type: String,
     required: true,
   },
-  LogType: {
+  logType: {
     type: String,
-    enum: ["log-in", "log-out"],
+    enum: ["logged-in", "logged-out"],
     required: true,
   },
-  Time: {
-    type: String,
-    required: true,
-  },
-  EmployeeNumber: {
+  time: {
     type: String,
     required: true,
   },
-  Name: {
+  employeeNumber: {
+    type: String,
+    required: true,
+  },
+  name: {
     type: String,
   },
 });

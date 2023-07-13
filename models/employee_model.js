@@ -1,18 +1,18 @@
 const mongoose = require("mongoose");
 
 const EmployeeSchema = new mongoose.Schema({
-  EmployeeNumber: {
+  employeeNumber: {
     type: String,
   },
-  Name: {
+  name: {
     type: String,
     required: [true, "Please provide name"],
   },
-  Department: {
+  department: {
     type: String,
     required: [true, "Please provide department"],
   },
-  Position: {
+  position: {
     type: String,
     required: [true, "Please provide position"],
   },

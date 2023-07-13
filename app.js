@@ -18,7 +18,7 @@ app.use(express.json());
 app.use("/api/v1/employee", employeeRoute);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/login", authRoute);
-app.use("/api/v1/log", logRoute);
+app.use("/api/v1/attendance", logRoute);
 
 // middlewares
 app.use(errorHandlerMiddleware);
