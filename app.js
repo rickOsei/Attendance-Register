@@ -4,6 +4,7 @@ const employeeRoute = require("./routes/employee_route");
 const userRoute = require("./routes/user_route");
 const authRoute = require("./routes/auth_route");
 const logRoute = require("./routes/log_route");
+const cors = require("cors");
 const connectDB = require("./db/connect");
 const notFoundMinddleware = require("./middlewares/not-found");
 const errorHandlerMiddleware = require("./middlewares/error-handler");
@@ -11,6 +12,9 @@ const errorHandlerMiddleware = require("./middlewares/error-handler");
 // express
 const express = require("express");
 const app = express();
+
+// cors
+app.use(cors());
 
 app.use(express.json());
 
