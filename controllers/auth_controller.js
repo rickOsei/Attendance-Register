@@ -16,7 +16,9 @@ const loginUser = async (req, res) => {
     throw new UnauthenticatedError("Wrong password");
   }
   const token = user.createJWT();
-  res.status(StatusCodes.default.OK).json({ user: { name: user.name }, token });
+  res
+    .status(StatusCodes.default.OK)
+    .json({ user: { name: user.name, email: user.email }, token });
 };
 
 module.exports = loginUser;
