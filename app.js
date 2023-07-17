@@ -24,6 +24,8 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/login", authRoute);
 app.use("/api/v1/attendance", logRoute);
 
+app.get("/", (req, res) => res.send("Attendance register app"));
+
 // middlewares
 app.use(errorHandlerMiddleware);
 app.use(notFoundMinddleware);
